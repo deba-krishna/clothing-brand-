@@ -354,6 +354,34 @@ details.forEach((item) => {
   
 });
 
+/*================ PRODUCT PAGE ACCORDION ================*/
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+  
+  header.addEventListener("click", () => {
+    
+    const item = header.parentElement;
+    
+    const isActive = item.classList.contains("active");
+    
+    document.querySelectorAll(".accordion-item").forEach((el) => {
+      
+      el.classList.remove("active");
+      
+    });
+    
+    if (!isActive) {
+      
+      item.classList.add("active");
+      
+    }
+    
+  });
+  
+});
+
 /*================ SCROLL ANIMATION ================*/
 
 const reveal = document.querySelectorAll(".review-card,.related-card,.feature");

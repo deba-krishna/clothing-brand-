@@ -2943,3 +2943,419 @@ SORT BOTTOM SHEET
     transform: translateY(0);
     
 }
+
+/*================ PRODUCT CONTENT LAYOUT ================*/
+
+.product-content {
+    
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 3rem;
+    
+}
+
+.product-gallery {
+    
+    position: sticky;
+    
+    top: 120px;
+    
+    height: fit-content;
+    
+}
+
+/*================ QUANTITY SELECTOR ================*/
+
+.quantity-selector {
+    
+    display: flex;
+    
+    align-items: center;
+    
+    gap: 1rem;
+    
+    width: fit-content;
+    
+    background: var(--container-color);
+    
+    border-radius: 999px;
+    
+    padding: 0.5rem 1rem;
+    
+}
+
+.quantity-selector button {
+    
+    width: 32px;
+    
+    height: 32px;
+    
+    border: none;
+    
+    background: transparent;
+    
+    cursor: pointer;
+    
+    font-size: 1.2rem;
+    
+    color: var(--coffee);
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    transition: var(--transition);
+    
+}
+
+.quantity-selector button:hover {
+    
+    color: var(--dark);
+    
+}
+
+.quantity-selector span {
+    
+    font-weight: 600;
+    
+    min-width: 30px;
+    
+    text-align: center;
+    
+}
+
+/*================ ACTION BUTTONS ================*/
+
+.action-buttons {
+    
+    display: flex;
+    
+    gap: 1rem;
+    
+    margin-top: 2rem;
+    
+}
+
+.action-buttons .btn {
+    
+    flex: 1;
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    gap: 0.5rem;
+    
+}
+
+.action-buttons .buy {
+    
+    flex: 1;
+    
+}
+
+/*================ PRODUCT DETAILS ACCORDION ================*/
+
+.product-details {
+    
+    padding: 4rem 0;
+    
+    background: var(--white);
+    
+}
+
+.accordion {
+    
+    display: grid;
+    
+    gap: 1rem;
+    
+}
+
+.accordion-item {
+    
+    border: 1px solid #e5e5e5;
+    
+    border-radius: 16px;
+    
+    overflow: hidden;
+    
+}
+
+.accordion-header {
+    
+    width: 100%;
+    
+    padding: 1.5rem;
+    
+    background: var(--white);
+    
+    border: none;
+    
+    cursor: pointer;
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
+    font-weight: 600;
+    
+    transition: var(--transition);
+    
+}
+
+.accordion-header:hover {
+    
+    background: var(--container-color);
+    
+}
+
+.accordion-header i {
+    
+    transition: var(--transition);
+    
+    font-size: 1.2rem;
+    
+    color: var(--coffee);
+    
+}
+
+.accordion-item.active .accordion-header i {
+    
+    transform: rotate(45deg);
+    
+}
+
+.accordion-content {
+    
+    padding: 0 1.5rem 1.5rem;
+    
+    max-height: 0;
+    
+    overflow: hidden;
+    
+    transition: max-height .35s ease;
+    
+    background: var(--container-color);
+    
+}
+
+.accordion-item.active .accordion-content {
+    
+    max-height: 500px;
+    
+}
+
+.accordion-content p {
+    
+    margin-bottom: 1rem;
+    
+    line-height: 1.8;
+    
+}
+
+.specs-list {
+    
+    list-style: none;
+    
+    padding: 0;
+    
+}
+
+.specs-list li {
+    
+    padding: 0.75rem 0;
+    
+    border-bottom: 1px solid #f0f0f0;
+    
+    line-height: 1.6;
+    
+}
+
+.specs-list li:last-child {
+    
+    border-bottom: none;
+    
+}
+
+/*================ REVIEWS SECTION ================*/
+
+.reviews-section {
+    
+    padding: 4rem 0;
+    
+    background: var(--white);
+    
+}
+
+.reviews-section h2 {
+    
+    font-size: 2rem;
+    
+    margin-bottom: 2rem;
+    
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.reviews-container {
+    
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+    gap: 2rem;
+    
+    margin-top: 2rem;
+    
+}
+
+.review-header {
+    
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: flex-start;
+    
+    margin-bottom: 1rem;
+    
+}
+
+.reviewer-info {
+    
+    flex: 1;
+    
+}
+
+.reviewer-info h4 {
+    
+    margin-bottom: 0.25rem;
+    
+    font-weight: 600;
+    
+}
+
+.review-date {
+    
+    font-size: 0.85rem;
+    
+    color: #999;
+    
+}
+
+.review-stars {
+    
+    color: #ffb400;
+    
+    font-size: 0.9rem;
+    
+}
+
+.review-card h5 {
+    
+    margin-bottom: 0.75rem;
+    
+    font-size: 1rem;
+    
+}
+
+.review-card p {
+    
+    line-height: 1.6;
+    
+    color: #666;
+    
+}
+
+/*================ RELATED PRODUCTS ================*/
+
+.related-products {
+    
+    padding: 4rem 0;
+    
+    background: var(--white);
+    
+}
+
+.related-products h2 {
+    
+    font-size: 2rem;
+    
+    margin-bottom: 2rem;
+    
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/*================ DESCRIPTION ================*/
+
+.description {
+    
+    color: #666;
+    
+    line-height: 1.8;
+    
+    margin-bottom: 1.5rem;
+    
+}
+
+/*================ RESPONSIVE PRODUCT PAGE ================*/
+
+@media (max-width: 768px) {
+    
+    .product-content {
+        
+        grid-template-columns: 1fr;
+        
+        gap: 2rem;
+        
+    }
+    
+    .product-gallery {
+        
+        position: static;
+        
+    }
+    
+    .features {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    
+    .sizes {
+        
+        flex-wrap: wrap;
+        
+    }
+    
+    .size {
+        
+        width: 48px;
+        
+        height: 48px;
+        
+    }
+    
+    .action-buttons {
+        
+        flex-direction: column;
+        
+    }
+    
+    .reviews-container {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    
+}

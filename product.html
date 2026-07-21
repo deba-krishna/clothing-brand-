@@ -1,14 +1,643 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Discover premium oversized graphic t-shirts crafted for creators, dreamers, and streetwear lovers.">
+    
+    <meta name="theme-color" content="#2D221B">
+    
+    <title>NOIR | Premium Graphic Streetwear</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
-  
+    
+    <!--========== NAVBAR ==========-->
+    
+    <header class="header">
+        
+        <nav class="navbar">
+            
+            <a href="index.html" class="logo">
+                NOIR
+            </a>
+            
+            <ul class="nav-links">
+                
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="shop.html">Shop</a></li>
+                
+                <li><a href="#">Collections</a></li>
+                
+                <li><a href="about.html">About</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+            
+            <div class="nav-icons">
+                
+                <i class="ri-search-line"></i>
+                
+                <i class="ri-shopping-bag-line"></i>
+                
+                <i class="ri-menu-3-line menu-btn"></i>
+                
+            </div>
+            
+        </nav>
+        
+    </header>
+
+    <!--========== PRODUCT SECTION ==========-->
+    
+    <section class="product">
+        
+        <div class="container">
+            
+            <a href="shop.html" class="back-btn">
+                <i class="ri-arrow-left-line"></i>
+                Back to Shop
+            </a>
+            
+            <div class="product-content">
+                
+                <!--========== PRODUCT GALLERY ==========-->
+                
+                <div class="product-gallery">
+                    
+                    <div class="product-image">
+                        
+                        <img id="mainImage" src="assets/images/products/product-1.jpg" alt="Akatsuki Premium Tee">
+                        
+                        <button class="wishlist">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="image-slider">
+                        
+                        <img src="assets/images/products/product-1.jpg" alt="Product view 1" class="thumb active">
+                        
+                        <img src="assets/images/products/product-1.jpg" alt="Product view 2" class="thumb">
+                        
+                        <img src="assets/images/products/product-1.jpg" alt="Product view 3" class="thumb">
+                        
+                        <img src="assets/images/products/product-1.jpg" alt="Product view 4" class="thumb">
+                        
+                    </div>
+                    
+                </div>
+                
+                <!--========== PRODUCT INFO ==========-->
+                
+                <div class="product-info">
+                    
+                    <span class="badge">In Stock</span>
+                    
+                    <h1>Akatsuki Premium Tee</h1>
+                    
+                    <div class="rating">
+                        
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                        </div>
+                        
+                        <span>(128 reviews)</span>
+                        
+                    </div>
+                    
+                    <div class="price">
+                        
+                        <span class="new-price">₹799</span>
+                        
+                        <span class="old-price">₹1,299</span>
+                        
+                        <span class="offer">38% OFF</span>
+                        
+                    </div>
+                    
+                    <p class="description">
+                        Premium oversized graphic t-shirt featuring the iconic Akatsuki design. 
+                        Crafted from 100% organic cotton with a perfect oversized fit. Perfect for 
+                        anime enthusiasts and streetwear lovers who want to express their style 
+                        with high-quality, comfortable clothing.
+                    </p>
+                    
+                    <!--========== FEATURES ==========-->
+                    
+                    <div class="features">
+                        
+                        <div class="feature">
+                            
+                            <i class="ri-leaf-line"></i>
+                            
+                            <p>100% Organic Cotton</p>
+                            
+                        </div>
+                        
+                        <div class="feature">
+                            
+                            <i class="ri-truck-line"></i>
+                            
+                            <p>Free Shipping</p>
+                            
+                        </div>
+                        
+                        <div class="feature">
+                            
+                            <i class="ri-refresh-line"></i>
+                            
+                            <p>Easy Returns</p>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!--========== SIZE SELECTOR ==========-->
+                    
+                    <div class="product-block">
+                        
+                        <div class="block-head">
+                            
+                            <h3>Select Size</h3>
+                            
+                            <a href="#">Size Guide</a>
+                            
+                        </div>
+                        
+                        <div class="sizes">
+                            
+                            <button class="size active">XS</button>
+                            
+                            <button class="size">S</button>
+                            
+                            <button class="size">M</button>
+                            
+                            <button class="size">L</button>
+                            
+                            <button class="size">XL</button>
+                            
+                            <button class="size">2XL</button>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!--========== QUANTITY SELECTOR ==========-->
+                    
+                    <div class="product-block">
+                        
+                        <h3 style="margin-bottom: 1rem;">Quantity</h3>
+                        
+                        <div class="quantity-selector">
+                            
+                            <button class="minus">
+                                <i class="ri-subtract-line"></i>
+                            </button>
+                            
+                            <span id="qty">1</span>
+                            
+                            <button class="plus">
+                                <i class="ri-add-line"></i>
+                            </button>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!--========== ACTION BUTTONS ==========-->
+                    
+                    <div class="action-buttons">
+                        
+                        <button class="btn cart">
+                            <i class="ri-shopping-bag-line"></i>
+                            Add to Cart
+                        </button>
+                        
+                        <button class="btn buy">
+                            Buy Now
+                        </button>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--========== PRODUCT DETAILS ACCORDION ==========-->
+    
+    <section class="product-details">
+        
+        <div class="container">
+            
+            <div class="accordion">
+                
+                <div class="accordion-item">
+                    
+                    <button class="accordion-header">
+                        <span>Product Description</span>
+                        <i class="ri-add-line"></i>
+                    </button>
+                    
+                    <div class="accordion-content">
+                        
+                        <p>
+                            The Akatsuki Premium Tee is a masterpiece of streetwear design. 
+                            Featuring a bold, high-quality print of the legendary Akatsuki organization, 
+                            this oversized tee is perfect for anime fans and fashion enthusiasts alike. 
+                            Made from 100% organic cotton, it ensures maximum comfort and durability. 
+                            The relaxed fit makes it suitable for all body types, embodying the essence 
+                            of modern streetwear culture.
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="accordion-item">
+                    
+                    <button class="accordion-header">
+                        <span>Specifications</span>
+                        <i class="ri-add-line"></i>
+                    </button>
+                    
+                    <div class="accordion-content">
+                        
+                        <ul class="specs-list">
+                            
+                            <li><strong>Material:</strong> 100% Organic Cotton</li>
+                            
+                            <li><strong>Weight:</strong> 200 gsm</li>
+                            
+                            <li><strong>Fit:</strong> Oversized</li>
+                            
+                            <li><strong>Care:</strong> Cold wash, hang dry</li>
+                            
+                            <li><strong>Print:</strong> High-quality direct-to-garment</li>
+                            
+                            <li><strong>Printing Method:</strong> Direct-to-Garment (DTG)</li>
+                            
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="accordion-item">
+                    
+                    <button class="accordion-header">
+                        <span>Shipping & Returns</span>
+                        <i class="ri-add-line"></i>
+                    </button>
+                    
+                    <div class="accordion-content">
+                        
+                        <p>
+                            <strong>Shipping:</strong> Free shipping on all orders across India. 
+                            Delivery within 3-5 business days. International shipping available.
+                        </p>
+                        
+                        <p>
+                            <strong>Returns:</strong> 30-day return policy for unworn items in original packaging. 
+                            Easy return process with prepaid shipping labels. Refunds processed within 5-7 business days.
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--========== REVIEWS SECTION ==========-->
+    
+    <section class="reviews-section">
+        
+        <div class="container">
+            
+            <h2>Customer Reviews</h2>
+            
+            <div class="reviews-container">
+                
+                <div class="review-card">
+                    
+                    <div class="review-header">
+                        
+                        <div class="reviewer-info">
+                            
+                            <h4>Rahul Kumar</h4>
+                            
+                            <span class="review-date">2 weeks ago</span>
+                            
+                        </div>
+                        
+                        <div class="review-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        
+                    </div>
+                    
+                    <h5>Amazing quality and design!</h5>
+                    
+                    <p>
+                        The Akatsuki tee exceeded my expectations. The print quality is incredible, 
+                        and the oversized fit is perfect. The material is super comfortable and doesn't 
+                        fade after washing. Highly recommended!
+                    </p>
+                    
+                </div>
+                
+                <div class="review-card">
+                    
+                    <div class="review-header">
+                        
+                        <div class="reviewer-info">
+                            
+                            <h4>Priya Singh</h4>
+                            
+                            <span class="review-date">1 month ago</span>
+                            
+                        </div>
+                        
+                        <div class="review-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                        </div>
+                        
+                    </div>
+                    
+                    <h5>Great value for money</h5>
+                    
+                    <p>
+                        Got this at a discount and it's totally worth it. The tee feels premium and 
+                        looks exactly like the product photos. Shipping was fast too!
+                    </p>
+                    
+                </div>
+                
+                <div class="review-card">
+                    
+                    <div class="review-header">
+                        
+                        <div class="reviewer-info">
+                            
+                            <h4>Akshay Verma</h4>
+                            
+                            <span class="review-date">1 month ago</span>
+                            
+                        </div>
+                        
+                        <div class="review-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        
+                    </div>
+                    
+                    <h5>Perfect for anime lovers</h5>
+                    
+                    <p>
+                        Love this design! Perfect fit, perfect print quality. I've bought two more 
+                        designs already. Keep up the good work NOIR!
+                    </p>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--========== RELATED PRODUCTS ==========-->
+    
+    <section class="related-products">
+        
+        <div class="container">
+            
+            <h2>You Might Also Like</h2>
+            
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    
+                    <div class="product-image">
+                        
+                        <img src="assets/images/products/product-2.jpg" alt="Minimalist Tee">
+                        
+                        <button class="wishlist">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="product-info">
+                        
+                        <h3>Minimalist Tee</h3>
+                        
+                        <p class="price">₹649</p>
+                        
+                        <a href="product.html" class="product-btn">View Product</a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="product-card">
+                    
+                    <div class="product-image">
+                        
+                        <img src="assets/images/products/product-3.jpg" alt="Vintage Classic">
+                        
+                        <button class="wishlist">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="product-info">
+                        
+                        <h3>Vintage Classic</h3>
+                        
+                        <p class="price">₹899</p>
+                        
+                        <a href="product.html" class="product-btn">View Product</a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="product-card">
+                    
+                    <div class="product-image">
+                        
+                        <img src="assets/images/products/product-4.jpg" alt="Urban Streetwear">
+                        
+                        <button class="wishlist">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="product-info">
+                        
+                        <h3>Urban Streetwear</h3>
+                        
+                        <p class="price">₹749</p>
+                        
+                        <a href="product.html" class="product-btn">View Product</a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="product-card">
+                    
+                    <div class="product-image">
+                        
+                        <img src="assets/images/products/product-5.jpg" alt="Oversized Fit">
+                        
+                        <button class="wishlist">
+                            <i class="ri-heart-line"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="product-info">
+                        
+                        <h3>Oversized Fit</h3>
+                        
+                        <p class="price">₹799</p>
+                        
+                        <a href="product.html" class="product-btn">View Product</a>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--========== FOOTER ==========-->
+    
+    <footer class="footer">
+        
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+                
+                <a href="index.html" class="footer-logo">
+                    NOIR
+                </a>
+                
+                <p>
+                    Premium graphic streetwear crafted for creators, dreamers and those who express themselves through fashion.
+                </p>
+                
+            </div>
+            
+            <div class="footer-links">
+                
+                <h3>Quick Links</h3>
+                
+                <a href="index.html">Home</a>
+                
+                <a href="shop.html">Shop</a>
+                
+                <a href="#">Collections</a>
+                
+                <a href="about.html">About</a>
+                
+                <a href="contact.html">Contact</a>
+                
+            </div>
+            
+            <div class="footer-links">
+                
+                <h3>Support</h3>
+                
+                <a href="#">Shipping</a>
+                
+                <a href="#">Returns</a>
+                
+                <a href="#">Privacy Policy</a>
+                
+                <a href="#">Terms & Conditions</a>
+                
+            </div>
+            
+            <div class="footer-social">
+                
+                <h3>Follow Us</h3>
+                
+                <div class="social-icons">
+                    
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom">
+            
+            <p>© 2026 NOIR. All Rights Reserved.</p>
+            
+        </div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
