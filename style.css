@@ -2278,11 +2278,27 @@ SORT BOTTOM SHEET
     
     align-items: center;
     
-    gap: .5rem;
+    gap: 0.5rem;
     
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     
     font-weight: 500;
+    
+    color: var(--coffee);
+    
+    text-decoration: none;
+    
+    transition: var(--transition);
+    
+    font-size: 0.95rem;
+    
+}
+
+.back-btn:hover {
+    
+    color: var(--dark);
+    
+    transform: translateX(-3px);
     
 }
 
@@ -2777,63 +2793,7 @@ SORT BOTTOM SHEET
     
 }
 
-.review-card {
-    
-    background: var(--container-color);
-    
-    padding: 1.5rem;
-    
-    border-radius: 20px;
-    
-}
 
-.review-header {
-    
-    display: flex;
-    
-    justify-content: space-between;
-    
-    align-items: center;
-    
-    margin-bottom: 1rem;
-    
-}
-
-.review-user {
-    
-    display: flex;
-    
-    gap: 1rem;
-    
-    align-items: center;
-    
-}
-
-.avatar {
-    
-    width: 48px;
-    
-    height: 48px;
-    
-    border-radius: 50%;
-    
-    background: var(--coffee);
-    
-    color: #fff;
-    
-    display: grid;
-    
-    place-items: center;
-    
-    font-weight: 700;
-    
-}
-
-.review-card p {
-    
-    line-height: 1.8;
-    
-}
 
 /*================ RELATED ================*/
 
@@ -3064,7 +3024,7 @@ SORT BOTTOM SHEET
 
 .product-details {
     
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     
     background: var(--white);
     
@@ -3074,17 +3034,29 @@ SORT BOTTOM SHEET
     
     display: grid;
     
-    gap: 1rem;
+    gap: 1.5rem;
     
 }
 
 .accordion-item {
     
-    border: 1px solid #e5e5e5;
+    background: #fff;
     
-    border-radius: 16px;
+    border-radius: 20px;
+    
+    box-shadow: var(--shadow);
     
     overflow: hidden;
+    
+    transition: var(--transition);
+    
+}
+
+.accordion-item:hover {
+    
+    transform: translateY(-8px);
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     
 }
 
@@ -3092,9 +3064,9 @@ SORT BOTTOM SHEET
     
     width: 100%;
     
-    padding: 1.5rem;
+    padding: 1.75rem 25px;
     
-    background: var(--white);
+    background: #fff;
     
     border: none;
     
@@ -3108,21 +3080,27 @@ SORT BOTTOM SHEET
     
     font-weight: 600;
     
+    font-size: 1rem;
+    
+    color: var(--dark);
+    
+    font-family: 'Poppins', sans-serif;
+    
     transition: var(--transition);
     
 }
 
 .accordion-header:hover {
     
-    background: var(--container-color);
+    color: var(--coffee);
     
 }
 
 .accordion-header i {
     
-    transition: var(--transition);
+    transition: transform .35s ease;
     
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     
     color: var(--coffee);
     
@@ -3130,27 +3108,29 @@ SORT BOTTOM SHEET
 
 .accordion-item.active .accordion-header i {
     
-    transform: rotate(45deg);
+    transform: rotate(180deg);
     
 }
 
 .accordion-content {
     
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 25px;
     
     max-height: 0;
     
     overflow: hidden;
     
-    transition: max-height .35s ease;
+    transition: max-height .35s ease, padding .35s ease;
     
-    background: var(--container-color);
+    background: #fff;
     
 }
 
 .accordion-item.active .accordion-content {
     
-    max-height: 500px;
+    padding: 0 25px 25px 25px;
+    
+    max-height: 600px;
     
 }
 
@@ -3158,7 +3138,17 @@ SORT BOTTOM SHEET
     
     margin-bottom: 1rem;
     
-    line-height: 1.8;
+    line-height: 1.7;
+    
+    color: #666;
+    
+    font-size: 0.95rem;
+    
+}
+
+.accordion-content p:last-child {
+    
+    margin-bottom: 0;
     
 }
 
@@ -3172,11 +3162,15 @@ SORT BOTTOM SHEET
 
 .specs-list li {
     
-    padding: 0.75rem 0;
+    padding: 0.85rem 0;
     
     border-bottom: 1px solid #f0f0f0;
     
     line-height: 1.6;
+    
+    color: #666;
+    
+    font-size: 0.95rem;
     
 }
 
@@ -3190,7 +3184,7 @@ SORT BOTTOM SHEET
 
 .reviews-section {
     
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     
     background: var(--white);
     
@@ -3198,11 +3192,15 @@ SORT BOTTOM SHEET
 
 .reviews-section h2 {
     
-    font-size: 2rem;
+    font-size: 2.2rem;
     
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     
     font-family: 'Poppins', sans-serif;
+    
+    font-weight: 700;
+    
+    letter-spacing: -0.5px;
     
 }
 
@@ -3210,11 +3208,31 @@ SORT BOTTOM SHEET
     
     display: grid;
     
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     
     gap: 2rem;
     
-    margin-top: 2rem;
+}
+
+.review-card {
+    
+    background: #fff;
+    
+    border-radius: 20px;
+    
+    padding: 30px 25px;
+    
+    box-shadow: var(--shadow);
+    
+    transition: var(--transition);
+    
+}
+
+.review-card:hover {
+    
+    transform: translateY(-8px);
+    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     
 }
 
@@ -3226,7 +3244,7 @@ SORT BOTTOM SHEET
     
     align-items: flex-start;
     
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     
 }
 
@@ -3238,15 +3256,21 @@ SORT BOTTOM SHEET
 
 .reviewer-info h4 {
     
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
     
     font-weight: 600;
+    
+    font-size: 1rem;
+    
+    color: var(--dark);
+    
+    font-family: 'Poppins', sans-serif;
     
 }
 
 .review-date {
     
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     
     color: #999;
     
@@ -3256,23 +3280,35 @@ SORT BOTTOM SHEET
     
     color: #ffb400;
     
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    
+    display: flex;
+    
+    gap: 0.1rem;
     
 }
 
 .review-card h5 {
     
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     
-    font-size: 1rem;
+    font-size: 1.05rem;
+    
+    font-weight: 600;
+    
+    color: var(--dark);
+    
+    font-family: 'Poppins', sans-serif;
     
 }
 
 .review-card p {
     
-    line-height: 1.6;
+    line-height: 1.7;
     
     color: #666;
+    
+    font-size: 0.95rem;
     
 }
 
@@ -3280,7 +3316,7 @@ SORT BOTTOM SHEET
 
 .related-products {
     
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     
     background: var(--white);
     
@@ -3288,11 +3324,15 @@ SORT BOTTOM SHEET
 
 .related-products h2 {
     
-    font-size: 2rem;
+    font-size: 2.2rem;
     
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     
     font-family: 'Poppins', sans-serif;
+    
+    font-weight: 700;
+    
+    letter-spacing: -0.5px;
     
 }
 
