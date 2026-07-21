@@ -8,7 +8,7 @@ NOIR is designed with a luxury-inspired aesthetic, clean layouts, smooth animati
 
 ## 🌐 Live Demo
 
-🔗 https://clothing-brand-delta-ashy.vercel.app
+🔗 [View Live Demo](https://clothing-brand-delta-ashy.vercel.app)
 
 ---
 
