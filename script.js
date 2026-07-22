@@ -4,10 +4,14 @@
 
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
+const header = document.querySelector(".header");
+const body = document.body;
 
 if (menuBtn && navLinks) {
   menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+    body.classList.toggle("menu-active");
+    header.classList.toggle("menu-active");
     
     if (navLinks.classList.contains("active")) {
       menuBtn.classList.remove("ri-menu-3-line");
@@ -16,6 +20,18 @@ if (menuBtn && navLinks) {
       menuBtn.classList.remove("ri-close-line");
       menuBtn.classList.add("ri-menu-3-line");
     }
+  });
+  
+  // Close menu when clicking on a nav link
+  const navItems = navLinks.querySelectorAll("a");
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      body.classList.remove("menu-active");
+      header.classList.remove("menu-active");
+      menuBtn.classList.remove("ri-close-line");
+      menuBtn.classList.add("ri-menu-3-line");
+    });
   });
 }
 
