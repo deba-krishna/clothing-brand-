@@ -1497,7 +1497,7 @@ section {
         
         right: -100%;
         
-        width: 230px;
+        width: 100%;
         
         height: calc(100vh - 80px);
         
@@ -1513,9 +1513,11 @@ section {
         
         gap: 35px;
         
-        box-shadow: -10px 0 30px rgba(0, 0, 0, .08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
         
         transition: right .35s ease;
+        
+        z-index: 999;
         
     }
     
@@ -4886,6 +4888,8 @@ SORT BOTTOM SHEET
     
     justify-content: center;
     
+    min-height: 400px;
+    
 }
 
 .about-hero-content h1 {
@@ -5374,7 +5378,9 @@ SORT BOTTOM SHEET
     
     .about-hero {
         
-        padding: 4rem 0 3rem;
+        padding: 5rem 1rem 3rem;
+        
+        min-height: auto;
         
     }
     
@@ -5382,11 +5388,15 @@ SORT BOTTOM SHEET
         
         font-size: 2rem;
         
+        margin-bottom: 1rem;
+        
     }
     
     .about-hero-content p {
         
         font-size: 1rem;
+        
+        padding: 0 1rem;
         
     }
     
@@ -5479,6 +5489,8 @@ SORT BOTTOM SHEET
     align-items: center;
     
     justify-content: center;
+    
+    min-height: 400px;
     
 }
 
@@ -5904,7 +5916,9 @@ SORT BOTTOM SHEET
     
     .contact-hero {
         
-        padding: 4rem 0 3rem;
+        padding: 5rem 1rem 3rem;
+        
+        min-height: auto;
         
     }
     
@@ -5912,11 +5926,15 @@ SORT BOTTOM SHEET
         
         font-size: 2rem;
         
+        margin-bottom: 1rem;
+        
     }
     
     .contact-hero-content p {
         
         font-size: 1rem;
+        
+        padding: 0 1rem;
         
     }
     
