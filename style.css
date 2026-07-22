@@ -1397,402 +1397,6 @@ section {
 
 
 /* ==========================================
-   CART PAGE
-========================================== */
-
-.cart-hero {
-    
-    padding: 7rem 0 7rem;
-    
-    background: var(--dark);
-    
-    color: #fff;
-    
-    text-align: center;
-    
-    display: flex;
-    
-    align-items: center;
-    
-    justify-content: center;
-    
-    min-height: 350px;
-    
-}
-
-.cart-hero h1 {
-    
-    font-family: 'Poppins', sans-serif;
-    
-    font-size: 3.5rem;
-    
-    margin-bottom: 1rem;
-    
-    letter-spacing: -0.5px;
-    
-}
-
-.cart-hero p {
-    
-    font-size: 1.1rem;
-    
-    color: #ddd;
-    
-    opacity: 0.9;
-    
-}
-
-.cart-section {
-    
-    padding: 5rem 0;
-    
-    background: var(--white);
-    
-    min-height: 60vh;
-    
-}
-
-.cart-container {
-    
-    display: grid;
-    
-    grid-template-columns: 1fr 380px;
-    
-    gap: 3rem;
-    
-}
-
-.cart-items {
-    
-    background: #fff;
-    
-}
-
-.cart-empty {
-    
-    text-align: center;
-    
-    padding: 5rem 2rem;
-    
-    border: 2px dashed #ddd;
-    
-    border-radius: 20px;
-    
-}
-
-.cart-empty i {
-    
-    font-size: 4rem;
-    
-    color: var(--coffee);
-    
-    margin-bottom: 1rem;
-    
-    opacity: 0.6;
-    
-}
-
-.cart-empty h3 {
-    
-    font-family: 'Poppins', sans-serif;
-    
-    font-size: 1.8rem;
-    
-    margin-bottom: 0.5rem;
-    
-    color: var(--dark);
-    
-}
-
-.cart-empty p {
-    
-    color: #666;
-    
-    margin-bottom: 2rem;
-    
-    max-width: 500px;
-    
-    margin-left: auto;
-    
-    margin-right: auto;
-    
-}
-
-.cart-item {
-    
-    display: grid;
-    
-    grid-template-columns: 120px 1fr auto;
-    
-    gap: 2rem;
-    
-    padding: 2rem;
-    
-    border-bottom: 1px solid #f0f0f0;
-    
-    align-items: center;
-    
-}
-
-.cart-item:last-child {
-    
-    border-bottom: none;
-    
-}
-
-.cart-item-image {
-    
-    width: 120px;
-    
-    height: 120px;
-    
-    border-radius: 12px;
-    
-    overflow: hidden;
-    
-    background: #f5f5f5;
-    
-}
-
-.cart-item-image img {
-    
-    width: 100%;
-    
-    height: 100%;
-    
-    object-fit: cover;
-    
-}
-
-.cart-item-details h4 {
-    
-    font-family: 'Poppins', sans-serif;
-    
-    margin-bottom: 0.5rem;
-    
-}
-
-.cart-item-details p {
-    
-    color: #666;
-    
-    font-size: 0.9rem;
-    
-    margin-bottom: 0.75rem;
-    
-}
-
-.cart-item-price {
-    
-    color: var(--coffee);
-    
-    font-weight: 600;
-    
-    font-size: 1.1rem;
-    
-}
-
-.cart-item-quantity {
-    
-    display: flex;
-    
-    align-items: center;
-    
-    gap: 0.75rem;
-    
-    border: 1px solid #ddd;
-    
-    border-radius: 8px;
-    
-    padding: 0.5rem 1rem;
-    
-}
-
-.cart-item-quantity button {
-    
-    background: none;
-    
-    border: none;
-    
-    cursor: pointer;
-    
-    color: var(--dark);
-    
-    font-weight: 600;
-    
-}
-
-.cart-item-actions {
-    
-    display: flex;
-    
-    flex-direction: column;
-    
-    gap: 0.5rem;
-    
-    text-align: right;
-    
-}
-
-.cart-item-remove {
-    
-    background: none;
-    
-    border: none;
-    
-    color: #999;
-    
-    cursor: pointer;
-    
-    font-size: 1.2rem;
-    
-    transition: color 0.3s ease;
-    
-}
-
-.cart-item-remove:hover {
-    
-    color: var(--coffee);
-    
-}
-
-.cart-item-total {
-    
-    font-weight: 600;
-    
-    color: var(--dark);
-    
-}
-
-.cart-summary {
-    
-    background: #f9f9f9;
-    
-    border-radius: 16px;
-    
-    padding: 2rem;
-    
-    height: fit-content;
-    
-    position: sticky;
-    
-    top: 100px;
-    
-}
-
-.cart-summary h3 {
-    
-    font-family: 'Poppins', sans-serif;
-    
-    margin-bottom: 1.5rem;
-    
-    font-size: 1.3rem;
-    
-}
-
-.summary-row {
-    
-    display: flex;
-    
-    justify-content: space-between;
-    
-    margin-bottom: 1rem;
-    
-    color: #666;
-    
-}
-
-.summary-row.total {
-    
-    color: var(--dark);
-    
-    font-weight: 600;
-    
-    font-size: 1.1rem;
-    
-}
-
-.summary-divider {
-    
-    height: 1px;
-    
-    background: #ddd;
-    
-    margin: 1.5rem 0;
-    
-}
-
-.btn-checkout {
-    
-    width: 100%;
-    
-    margin-bottom: 1rem;
-    
-}
-
-.btn-outline {
-    
-    width: 100%;
-    
-    text-align: center;
-    
-}
-
-/* Cart Page Responsive */
-
-@media (max-width: 768px) {
-    
-    .cart-container {
-        
-        grid-template-columns: 1fr;
-        
-        gap: 2rem;
-        
-    }
-    
-    .cart-summary {
-        
-        position: static;
-        
-    }
-    
-    .cart-hero h1 {
-        
-        font-size: 2rem;
-        
-    }
-    
-    .cart-item {
-        
-        grid-template-columns: 80px 1fr;
-        
-        gap: 1.5rem;
-        
-    }
-    
-    .cart-item-image {
-        
-        width: 80px;
-        
-        height: 80px;
-        
-    }
-    
-    .cart-item-actions {
-        
-        grid-column: 1 / -1;
-        
-        flex-direction: row;
-        
-        justify-content: space-between;
-        
-        text-align: left;
-        
-    }
-    
-}
-
-/* ==========================================
    ANIMATIONS
 ========================================== */
 
@@ -1889,13 +1493,13 @@ section {
         
         position: fixed;
         
-        top: 0;
+        top: 80px;
         
         right: -100%;
         
-        width: 50%;
+        width: 100%;
         
-        height: 100vh;
+        height: calc(100vh - 80px);
         
         background: #fff;
         
@@ -1909,29 +1513,17 @@ section {
         
         gap: 35px;
         
-        box-shadow: -10px 0 30px rgba(0, 0, 0, .15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
         
         transition: right .35s ease;
         
-        z-index: 2000;
+        z-index: 999;
         
     }
     
     .nav-links.active {
         
         right: 0;
-        
-    }
-    
-    body.menu-active {
-        
-        overflow: hidden;
-        
-    }
-    
-    .header.menu-active {
-        
-        z-index: 1999;
         
     }
     
@@ -5282,7 +4874,7 @@ SORT BOTTOM SHEET
 
 .about-hero {
     
-    padding: 7rem 0 7rem;
+    padding: 8rem 0 6rem;
     
     background: var(--dark);
     
@@ -5296,7 +4888,7 @@ SORT BOTTOM SHEET
     
     justify-content: center;
     
-    min-height: 500px;
+    min-height: 400px;
     
 }
 
@@ -5884,7 +5476,7 @@ SORT BOTTOM SHEET
 
 .contact-hero {
     
-    padding: 7rem 0 7rem;
+    padding: 8rem 0 6rem;
     
     background: linear-gradient(135deg, var(--dark) 0%, #1a1410 100%);
     
@@ -5898,7 +5490,7 @@ SORT BOTTOM SHEET
     
     justify-content: center;
     
-    min-height: 500px;
+    min-height: 400px;
     
 }
 
