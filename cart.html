@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Shopping Cart - NOIR Premium Graphic Streetwear">
+    
+    <meta name="theme-color" content="#2D221B">
+    
+    <title>Shopping Cart | NOIR</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    
+    <!--========== NAVBAR ==========-->
+    
+    <header class="header">
+        
+        <nav class="navbar">
+            
+            <a href="index.html" class="logo">
+                NOIR
+            </a>
+            
+            <ul class="nav-links">
+                
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="shop.html">Shop</a></li>
+                
+                <li><a href="#">Collections</a></li>
+                
+                <li><a href="about.html">About</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+            
+            <div class="nav-icons">
+                
+                <i class="ri-search-line"></i>
+                
+                <a href="cart.html" class="cart-icon">
+                    <i class="ri-shopping-bag-line"></i>
+                </a>
+                
+                <i class="ri-menu-3-line menu-btn"></i>
+                
+            </div>
+            
+        </nav>
+        
+    </header>
+
+    <!--========== CART PAGE ==========-->
+
+    <section class="cart-section">
+        
+        <div class="cart-container">
+            
+            <!--========== CART HEADER ==========-->
+            
+            <div class="cart-header">
+                
+                <a href="shop.html" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                    Back to Shop
+                </a>
+                
+                <h1>Shopping Cart</h1>
+                
+            </div>
+
+            <!--========== EMPTY CART ==========-->
+            
+            <div id="emptyCart" class="empty-cart">
+                
+                <div class="empty-cart-content">
+                    
+                    <i class="ri-shopping-bag-line empty-cart-icon"></i>
+                    
+                    <h2>Your Cart is Empty</h2>
+                    
+                    <p>Discover amazing graphic tees and add them to your cart</p>
+                    
+                    <a href="shop.html" class="btn">
+                        Continue Shopping
+                    </a>
+                    
+                </div>
+                
+            </div>
+
+            <!--========== CART ITEMS & CHECKOUT ==========-->
+            
+            <div id="cartContent" class="cart-content">
+                
+                <!--========== CART ITEMS ==========-->
+                
+                <div class="cart-main">
+                    
+                    <div id="cartItemsContainer" class="cart-items">
+                        <!-- Items will be rendered here -->
+                    </div>
+
+                    <!--========== PROMO CODE ==========-->
+                    
+                    <div class="promo-section">
+                        
+                        <h3>Have a Promo Code?</h3>
+                        
+                        <div class="promo-input-group">
+                            
+                            <input type="text" id="promoCode" placeholder="Enter promo code" maxlength="20">
+                            
+                            <button id="applyPromo" class="promo-btn">
+                                Apply
+                            </button>
+                            
+                        </div>
+                        
+                        <p class="promo-hint">Try: NOIR20</p>
+                        
+                    </div>
+                    
+                </div>
+
+                <!--========== ORDER SUMMARY ==========-->
+                
+                <div class="cart-sidebar">
+                    
+                    <div class="order-summary">
+                        
+                        <h3>Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            
+                            <span>Subtotal</span>
+                            
+                            <span id="subtotal">₹0</span>
+                            
+                        </div>
+                        
+                        <div class="summary-row">
+                            
+                            <span>Tax (18% GST)</span>
+                            
+                            <span id="tax">₹0</span>
+                            
+                        </div>
+                        
+                        <div class="summary-row">
+                            
+                            <span>Shipping</span>
+                            
+                            <span class="free-shipping">FREE</span>
+                            
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-total">
+                            
+                            <span>Total</span>
+                            
+                            <span id="total">₹0</span>
+                            
+                        </div>
+                        
+                        <button id="checkoutBtn" class="btn btn-full">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <a href="shop.html" class="btn btn-secondary">
+                            Continue Shopping
+                        </a>
+                        
+                    </div>
+
+                    <!--========== SECURITY INFO ==========-->
+                    
+                    <div class="security-info">
+                        
+                        <div class="security-item">
+                            
+                            <i class="ri-lock-line"></i>
+                            
+                            <span>Secure Checkout</span>
+                            
+                        </div>
+                        
+                        <div class="security-item">
+                            
+                            <i class="ri-shield-check-line"></i>
+                            
+                            <span>100% Safe</span>
+                            
+                        </div>
+                        
+                        <div class="security-item">
+                            
+                            <i class="ri-truck-line"></i>
+                            
+                            <span>Fast Delivery</span>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!--========== FOOTER ==========-->
+
+    <footer class="footer">
+        
+        <div class="footer-container">
+            
+            <div class="footer-brand">
+                
+                <a href="index.html" class="footer-logo">
+                    NOIR
+                </a>
+                
+                <p>
+                    Premium graphic streetwear crafted for creators, dreamers and those who express themselves through fashion.
+                </p>
+                
+            </div>
+            
+            <div class="footer-links">
+                
+                <h3>Quick Links</h3>
+                
+                <a href="index.html">Home</a>
+                
+                <a href="shop.html">Shop</a>
+                
+                <a href="#">Collections</a>
+                
+                <a href="about.html">About</a>
+                
+                <a href="contact.html">Contact</a>
+                
+            </div>
+            
+            <div class="footer-links">
+                
+                <h3>Support</h3>
+                
+                <a href="#">Shipping</a>
+                
+                <a href="#">Returns</a>
+                
+                <a href="#">Privacy Policy</a>
+                
+                <a href="#">Terms & Conditions</a>
+                
+            </div>
+            
+            <div class="footer-social">
+                
+                <h3>Follow Us</h3>
+                
+                <div class="social-icons">
+                    
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom">
+            
+            <p>© 2026 NOIR. All Rights Reserved.</p>
+            
+        </div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
