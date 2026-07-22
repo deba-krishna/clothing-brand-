@@ -20,6 +20,31 @@ if (menuBtn && navLinks) {
 }
 
 // ==========================
+// Search Functionality
+// ==========================
+
+const searchIcon = document.querySelector(".nav-icons i.ri-search-line");
+if (searchIcon) {
+  searchIcon.addEventListener("click", () => {
+    const searchTerm = prompt("Search for products...");
+    if (searchTerm && searchTerm.trim()) {
+      window.location.href = `shop.html?search=${encodeURIComponent(searchTerm)}`;
+    }
+  });
+}
+
+// ==========================
+// Collections Navigation
+// ==========================
+
+const collectionsLinks = document.querySelectorAll('a[href="#"]');
+collectionsLinks.forEach(link => {
+  if (link.textContent.trim() === "Collections") {
+    link.href = "shop.html";
+  }
+});
+
+// ==========================
 // Navbar Scroll Effect
 // ==========================
 
@@ -298,16 +323,47 @@ if (cartBtn) {
   
   cartBtn.addEventListener("click", () => {
     
-    cart.innerHTML = '<i class="ri-check-line"></i>';
+    // Get product details from the page
+    const productName = document.querySelector(".product-info h1")?.textContent || "Product";
+    const price = parseInt(document.querySelector(".new-price")?.textContent.replace("₹", "").replace(",", "") || 0);
+    const selectedSize = document.querySelector(".size.active")?.textContent || "M";
+    const quantity = parseInt(document.getElementById("qty")?.textContent || 1);
+    const productImage = document.getElementById("mainImage")?.src || "assets/images/products/product-1.jpg";
     
-    cart.style.background = "#16a34a";
+    // Get or initialize cart from localStorage
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Create product object
+    const product = {
+      id: Date.now(),
+      name: productName,
+      price: price,
+      size: selectedSize,
+      quantity: quantity,
+      image: productImage,
+      color: "Black"
+    };
+    
+    // Add to cart
+    const existingItem = cartItems.find(item => item.name === productName && item.size === selectedSize);
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      cartItems.push(product);
+    }
+    
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    
+    // Show success feedback
+    const originalHTML = cartBtn.innerHTML;
+    const originalBg = cartBtn.style.background;
+    
+    cartBtn.innerHTML = '<i class="ri-check-line"></i>';
+    cartBtn.style.background = "#16a34a";
     
     setTimeout(() => {
-      
-      cart.innerHTML = '<i class="ri-shopping-bag-line"></i>';
-      
-      cart.style.background = "";
-      
+      cartBtn.innerHTML = originalHTML;
+      cartBtn.style.background = originalBg;
     }, 1800);
     
   });

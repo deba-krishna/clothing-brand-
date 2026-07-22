@@ -3352,11 +3352,17 @@ SORT BOTTOM SHEET
 
 @media (max-width: 768px) {
     
+    .product {
+        
+        padding: 5rem 0 2rem;
+        
+    }
+    
     .product-content {
         
         grid-template-columns: 1fr;
         
-        gap: 2rem;
+        gap: 1.5rem;
         
     }
     
@@ -3366,9 +3372,23 @@ SORT BOTTOM SHEET
         
     }
     
+    .product-info h1 {
+        
+        font-size: 1.5rem;
+        
+    }
+    
     .features {
         
         grid-template-columns: 1fr;
+        
+        gap: 0.75rem;
+        
+    }
+    
+    .feature {
+        
+        padding: 0.75rem;
         
     }
     
@@ -3389,6 +3409,14 @@ SORT BOTTOM SHEET
     .action-buttons {
         
         flex-direction: column;
+        
+        gap: 0.75rem;
+        
+    }
+    
+    .action-buttons .btn {
+        
+        padding: 12px 20px;
         
     }
     
@@ -4814,7 +4842,7 @@ SORT BOTTOM SHEET
 
 .about-hero {
     
-    padding: 5rem 0;
+    padding: 8rem 0 6rem;
     
     background: var(--dark);
     
@@ -4822,13 +4850,19 @@ SORT BOTTOM SHEET
     
     text-align: center;
     
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
 }
 
 .about-hero-content h1 {
     
-    font-size: 3rem;
+    font-size: 3.5rem;
     
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     
     font-family: 'Poppins', sans-serif;
     
@@ -4836,19 +4870,23 @@ SORT BOTTOM SHEET
     
     letter-spacing: -0.5px;
     
+    line-height: 1.1;
+    
 }
 
 .about-hero-content p {
     
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     
-    max-width: 600px;
+    max-width: 700px;
     
     margin: 0 auto;
     
     line-height: 1.8;
     
-    opacity: 0.9;
+    opacity: 0.85;
+    
+    color: #ddd;
     
 }
 
@@ -5036,9 +5074,9 @@ SORT BOTTOM SHEET
 
 .stats-section {
     
-    padding: 3.5rem 0;
+    padding: 5rem 0;
     
-    background: var(--dark);
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1410 100%);
     
     color: #fff;
     
@@ -5048,7 +5086,7 @@ SORT BOTTOM SHEET
     
     display: grid;
     
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     
     gap: 2rem;
     
@@ -5058,29 +5096,53 @@ SORT BOTTOM SHEET
     
     text-align: center;
     
-    padding: 2rem;
+    padding: 3rem 2rem;
+    
+    background: rgba(255, 255, 255, .05);
+    
+    border-radius: 20px;
+    
+    border: 1px solid rgba(255, 255, 255, .1);
+    
+    backdrop-filter: blur(20px);
+    
+    transition: var(--transition);
+    
+}
+
+.stat-card:hover {
+    
+    background: rgba(255, 255, 255, .1);
+    
+    border-color: var(--coffee);
+    
+    transform: translateY(-8px);
     
 }
 
 .stat-number {
     
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     
     font-weight: 700;
     
     color: var(--coffee);
     
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     
     font-family: 'Poppins', sans-serif;
+    
+    letter-spacing: -1px;
     
 }
 
 .stat-label {
     
-    font-size: 1rem;
+    font-size: 1.05rem;
     
-    color: #e0e0e0;
+    color: #ddd;
+    
+    font-weight: 500;
     
 }
 
@@ -5204,11 +5266,11 @@ SORT BOTTOM SHEET
 
 .about-cta {
     
-    padding: 3.5rem 0;
+    padding: 5.5rem 0;
     
-    background: var(--dark);
+    background: linear-gradient(135deg, var(--beige) 0%, #f5ede3 100%);
     
-    color: #fff;
+    color: var(--dark);
     
     text-align: center;
     
@@ -5216,29 +5278,75 @@ SORT BOTTOM SHEET
 
 .about-cta h2 {
     
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     
     font-family: 'Poppins', sans-serif;
     
     font-weight: 700;
     
+    letter-spacing: -0.5px;
+    
+    color: var(--dark);
+    
 }
 
 .about-cta p {
     
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     
-    opacity: 0.9;
+    color: #666;
+    
+    line-height: 1.8;
+    
+    opacity: 1;
+    
+}
+
+.about-cta .btn {
+    
+    background: var(--coffee);
+    
+    color: #fff;
+    
+    display: inline-flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    padding: 16px 42px;
     
 }
 
 /*================ ABOUT PAGE RESPONSIVE ================*/
 
+@media (max-width: 992px) {
+    
+    .about-hero {
+        
+        padding: 5rem 0 4rem;
+        
+    }
+    
+    .about-hero-content h1 {
+        
+        font-size: 2.5rem;
+        
+    }
+    
+}
+
 @media (max-width: 768px) {
+    
+    .about-hero {
+        
+        padding: 4rem 0 3rem;
+        
+    }
     
     .about-hero-content h1 {
         
@@ -5266,9 +5374,35 @@ SORT BOTTOM SHEET
         
     }
     
+    .stats-section {
+        
+        padding: 3.5rem 0;
+        
+    }
+    
     .stats-grid {
         
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        
+        gap: 1.5rem;
+        
+    }
+    
+    .stat-card {
+        
+        padding: 2rem;
+        
+    }
+    
+    .stat-number {
+        
+        font-size: 2.5rem;
+        
+    }
+    
+    .stat-label {
+        
+        font-size: 1rem;
         
     }
     
@@ -5278,27 +5412,51 @@ SORT BOTTOM SHEET
         
     }
     
+    .about-cta {
+        
+        padding: 4rem 0;
+        
+    }
+    
+    .about-cta h2 {
+        
+        font-size: 2rem;
+        
+    }
+    
+    .about-cta p {
+        
+        font-size: 1rem;
+        
+    }
+    
 }
 
 /*================ CONTACT PAGE ================*/
 
 .contact-hero {
     
-    padding: 5rem 0;
+    padding: 8rem 0 6rem;
     
-    background: var(--dark);
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1410 100%);
     
     color: #fff;
     
     text-align: center;
     
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
 }
 
 .contact-hero-content h1 {
     
-    font-size: 3rem;
+    font-size: 3.5rem;
     
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     
     font-family: 'Poppins', sans-serif;
     
@@ -5306,19 +5464,25 @@ SORT BOTTOM SHEET
     
     letter-spacing: -0.5px;
     
+    line-height: 1.1;
+    
 }
 
 .contact-hero-content p {
     
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     
-    max-width: 600px;
+    max-width: 700px;
     
     margin: 0 auto;
     
     line-height: 1.8;
     
-    opacity: 0.9;
+    opacity: 0.85;
+    
+    color: #ddd;
+    
+    font-weight: 400;
     
 }
 
@@ -5690,11 +5854,39 @@ SORT BOTTOM SHEET
 
 /*================ CONTACT PAGE RESPONSIVE ================*/
 
+@media (max-width: 992px) {
+    
+    .contact-hero {
+        
+        padding: 5rem 0 4rem;
+        
+    }
+    
+    .contact-hero-content h1 {
+        
+        font-size: 2.5rem;
+        
+    }
+    
+}
+
 @media (max-width: 768px) {
+    
+    .contact-hero {
+        
+        padding: 4rem 0 3rem;
+        
+    }
     
     .contact-hero-content h1 {
         
         font-size: 2rem;
+        
+    }
+    
+    .contact-hero-content p {
+        
+        font-size: 1rem;
         
     }
     
@@ -5718,6 +5910,12 @@ SORT BOTTOM SHEET
         
     }
     
+    .contact-form-section h2 {
+        
+        font-size: 1.5rem;
+        
+    }
+    
     .form-row {
         
         grid-template-columns: 1fr;
@@ -5727,6 +5925,18 @@ SORT BOTTOM SHEET
     .faq-grid {
         
         grid-template-columns: 1fr;
+        
+    }
+    
+    .faq-section {
+        
+        padding: 3rem 0;
+        
+    }
+    
+    .faq-section h2 {
+        
+        font-size: 1.8rem;
         
     }
     
