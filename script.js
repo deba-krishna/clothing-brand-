@@ -1155,3 +1155,16 @@ class ContactForm {
 }
 
 const contactForm = new ContactForm();
+
+// ==========================
+// Shopping Bag Navigation
+// ==========================
+
+const shoppingBagIcon = document.querySelector(".nav-icons i.ri-shopping-bag-line");
+
+if (shoppingBagIcon) {
+  shoppingBagIcon.addEventListener("click", () => {
+    window.location.href = "cart.html";
+  });
+  shoppingBagIcon.style.cursor = "pointer";
+}
